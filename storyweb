@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IN PROGRESS: STORY WEB.org</title>
+    </head>
+    <body>
+    <style>
+    #search-button:hover{
+        background-color: rgb(51, 51, 51);
+    }
+    #button:hover{
+        background-color: rgb(102, 98, 102);
+    }
+    #back:hover{
+        background-color: rgb(51, 51, 51);
+    }
+    .choice:hover{
+        background-color: rgb(51, 51, 51);
+    }
+a, .article {
+   color: rgb(140, 255, 0); 
+}  
+    /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(138, 138, 138);
+  border-radius: 10px;
+}
+    #MaNappi {
+        position: relative;
+        top: -55px;
+        z-index: 2;
+        left: 78%;
+        height: 39px;
+        width: 78px;
+        border-radius: 10px;
+    }
+    #maantieto-quiz {
+        border-radius: 15px;
+        background-color: rgb(196, 196, 196);
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 100px;
+        font-family: monospace;
+        padding-top: 1px;
+        padding-left: 15px;
+        height: 95px;
+        z-index: 3;
+    }
+    #history-heading {
+         margin-top: 100px;
+        color: rgb(131, 217, 26);
+        font-size: 13px;
+    }
+    #mystery-heading {
+        margin-top: 100px;
+        color: rgb(131, 217, 26);
+        font-size: 13px;
+    }
+    #yamato {
+        background-color: rgb(51, 51, 51);
+        color: rgb(131, 217, 26);
+
+    }
+    #yamato, .front-articles {
+        background-color: rgb(51, 51, 51);
+        color: rgb(131, 217, 26);
+        margin-top: 15%;
+    }
+    #dyatlov-pass {
+        background-color: rgb(51, 51, 51);
+        color: rgb(131, 217, 26);
+        margin-top: 15%;
+    }
+    #lars-mittank {
+        background-color: rgb(51, 51, 51);
+        color: rgb(131, 217, 26);
+    }
+    #quiz {
+        top: 78%;
+    }
+    #history {
+        top: 66%;
+    }
+    #horror {
+        top: 54%;
+    }
+    #mystery {
+        top: 42%;
+    }
+    #main-heading {
+        position: absolute;
+        z-index: 3;
+        top: -24%;
+        }
+    .choice {
+        width: 100%;
+        position: absolute;
+        font-size: 15px;
+        color: rgb(131, 217, 26);
+        background-color: rgb(26, 24, 26);
+    }
+    #front {
+        top: 30%;
+    }
+    button {
+        font-family: monospace;
+        border: 0;
+    }
+    #search-button {
+        position: absolute;
+        top: 19%;
+        left: 2%;
+        font-size: 12px;
+        border-radius: 5px;
+        color: rgb(131, 217, 26);
+        background-color: rgb(26, 24, 26);
+    }
+        #search {
+            position: absolute;
+            top: 18%;
+            left: 37%;
+            width: 57%;
+            border-radius: 5px;
+            z-index: 4;
+        }
+        #menu {
+            position: absolute;
+            z-index: 4;
+            background-color: rgb(26, 24, 26);
+            width: 33%;
+            height: 80%;
+            top: 2%;
+            right: 1%;
+        }
+        .line {
+            background-color: rgb(131, 217, 26);
+            width: 99%;
+            height: 14%;
+            margin: 13%;
+            margin-left: 1%;
+        }
+        #button {
+            background-color: rgb(71, 71, 71);
+            top: 15%;
+            right: 1.5%;
+            width: 9%;
+            height: 47%;
+            position: absolute;
+            z-index: 2;
+        }
+        #back {
+            background-color: rgb(26, 24, 26);
+            position: absolute;
+            z-index: 3;
+            top: 4%;
+            right: 6%;
+            width: 25%;
+            height: 12%;
+        }
+        #page {
+            background-color: rgb(71, 71, 71);
+            padding-left: 31%;
+            font-family: monospace;
+            font-size: 20px;
+            color: rgb(131, 217, 26);
+            position: absolute;
+            width: 66%;
+            height: 19%;
+            top: 2%;
+            z-index: 1;
+        }
+        body {
+            background-color: black;
+        }
+        #first-article {
+            margin-top: 100px;
+            background-color: rgb(131, 217, 26);
+            color: black;
+            
+        }
+        .article{
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 25px;
+            padding: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-width: 2px;
+            font-family: monospace;
+        }
+        
+    </style>
+    <div id = "page" >
+        <h1 id = "main-heading">STORY WEB</h1>
+        <button type = "click" id = "button">
+            <div class= "line"></div>
+            <div class= "line"></div>
+            <div class= "line"></div>
+        </button>
+    </div>
+    
+    <div id = "menu">
+       <button type = "click" id = "back">
+            <div class= "line"></div>
+            <div class= "line"></div>
+            <div class= "line"></div>
+        </button> 
+        <form id = "search-form">
+            <label for = "search-button">
+            <button type = "input" id = "search-button">
+                SEARCH
+            </button>
+                <input id = "search" placeholder = "Search..." name = "search-input">
+            </label>
+        </form>
+        <button class = "choice" id = "front">
+            FRONT PAGE
+        </button>
+        <button class = "choice" id = "mystery">
+            MYSTERIES
+        </button>
+        <button class = "choice" id = "horror">
+            HORROR STORIES
+        </button>
+        <button class = "choice" id = "history">
+            HISTORY
+        </button>
+        <button class = "choice" id = "quiz">
+            QUIZZES
+        </button>
+    </div>
+    
+    <div id = "front-articles">
+        <div id = "first-article" class = "article">
+    <h3></h3>
+    <p>Welcome to Story Web. Here you can read horror stories and
+    articles about mysteries and history. If you have any             questions, you can send us an email to example@example.com.
+    </div>
+     <div class="article" id = "lars-mittank">
+            <h1>The Disappearence of Lars Mittank</h1>
+            <p>
+               On July 8, 2014 a German man named Lars Joachim Mittank disappeared in Varna, Bulgaria. He was on vacation with his friends in Bulgaria, and got involved in a fight with four other men. His ear drum  was ruptured in the fight, and he was unabled to fly back to Germany with his friends.<br><br> He rented a room from a hostel in a poor area in Varna,  Bulgaria. He was seen behaving oddly on the hostel's  security cameras, only spending one night at the hostel. He had called his mother to cancel all his credit cards  and that four men were following him, threatening to kill him. His mother then booked him a flight back to Germany  for the following day.<br><br>
+ Lars Mittank was seen on airport security cameras entering  the airport with his luggage. Later he was seen sprinting out of the airport, without his luggage, jumping over a  fence. Eyewitnesses told seeing him running into the nearby forest, which was the last time he was seen. What do you  think really happened to Lars Mittank?<br><br>
+            </p>
+            <p>Sources: <a href = "https://en.wikipedia.org/wiki/Disappearance_of_Lars_Mittank">Wikipedia</a></p>
+        </div>
+        
+        <div class="article" id = "dyatlov-pass">
+            <h1>The Incident at Dyatlov Pass</h1>
+            <p>
+                On February 1, 1959, nine ski-hikers went to the Ural                     mountains, what is now Russia. The group set up a camp on                 the slope of Kholat 
+                Syakhl, that is now named Igor Dyatlov, the name of the                   groups leader. Something mysterious had happenad to them, 
+                because they never returned.<br><br>Searchers were sent to
+                find the missing group. After many days of searching, on 
+                February 26, searchers found the ski-hiker's abandoned 
+                camp sight, where their tent was <em>ripped open from the
+                inside.</em> Footprints were found, that led to the near
+                by woods, where the first two bodies were found, with
+                only underwear on. The other seven bodies were found later.               First they were thought to have died from hypothermia, but
+                when the bodies were inventoried by medical examiners, the
+                evidence made no sense. Some of the bodies had radioactive
+                clothes on and some had signs of physical trauma, one body
+                had third-degree burns, one was missing a tongue, and 
+                another was missing both eyes. One body had a fractured
+                skull and another had been vomiting blood.<br><br> There are many 
+                theories of this mystery. One of them is <a href="https://en.wikipedia.org/wiki/Infrasound"                       >infrasound</a>
+                , wich is a real phenomenon, that can cause fear in humans. It's still unknown what happened that night to the nine ski-hikers.
+            </p>
+            <p>Sources: <a href = "https://en.wikipedia.org/wiki/Dyatlov_Pass_incident#:~:text=The%20Dyatlov%20Pass%20incident%20%28Russian%3A%20%D0%93%D0%B8%D0%B1%D0%B5%D0%BB%D1%8C%20%D1%82%D1%83%D1%80%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%8B%20%D0%94%D1%8F%D1%82%D0%BB%D0%BE%D0%B2%D0%B0%29,an%20area%20now%20named%20in%20honour%20of%20">Wikipedia</a></p>
+        </div>
+        
+        <div class = "article" id = "yamato">
+            <h1>The Mighty Battleship Yamato</h1>
+            <p>Japan coudn't build large fleets of ships against
+            the United States, so they decided to build larger
+            ships, that could attack many ships at once. The new
+            larger ships were called the Yamato-class.<br><br>
+            The first battleship of the Yamato-class was the                  mighty Yamato. She was launched on August 8, 1940,
+            and was named after the Yamato province. She was 256 
+            meters long, but her sister the Musashi was larger.
+            <br><br>
+            The construction of the Yamato in Kure was kept in
+            secret and hidden from spies. If one of the workers 
+            told someone about the project, they could have faced 
+            a  death sentence.<br><br>
+            The Yamato weighed in total 72,800 tons, and her 
+            armor weighed in total 22,534 tons, almost 
+            one-third of the ships weight. She was outfitted
+            with nine 18.1-inch guns on three turrets. The largest
+            and most powerful ever mounted on a warship. The turrets weighed 2,774 tons, and the guns 
+            had a range of 25-miles (40-km). The Yamato had the 
+            largest amount of artillery mounted on one ship.
+            Her armor varied from 8-inches to 16-inches thick, 
+            and her gun turrets were protected with armor ranging
+            from 9.5-inches to 26 inches thick.
+            She had a hangar , which could store 3 to 4 aircraft,
+            that were launched by two catapults.<br><br>
+            Her four steam engines could produce a power of
+            150,000 SHP. Her top speed was 27 knots (50 km/h).
+            <br><br>
+            The Yamato was enver a part of a major battle, but the
+            battle of Leyte Gulf she saw her first big action. She
+            hit a Aemrican aircraft carrier from a distance of 
+            20-miles, with her 18.1-inch guns.<br><br>
+            The Yamato faced her fate on April 7, 1945, when she 
+            was met by 400 American aircraft. She withstood the 
+            bombs, that were dropped on her, but she was finally
+            sunk by 19 American aerial torpedoes, drowning 2,498
+            of her crew. The end of the Yamato was, when her her
+            forward internal magazines detonated. The result was 
+            a large explosion. In the incident 3,063 of Yamato's
+            3,332 crew members were killed. Even though the Yamato
+            sunk, she is still one of the greatest battleships of
+            all time.
+            </p>
+        </div>
+        
+    </div>
+    
+    <div id = "mystery-articles">
+    <div class = "article" id = "mystery-heading"><h1>MYSTERIES</h1></div>
+             <div class="article" id = "lars-mittank">
+            <h1>The Disappearence of Lars Mittank</h1>
+            <p>
+               On July 8, 2014 a German man named Lars Mittank disappeared in Varna, Bulgaria. He was on vacation with his friends in Bulgaria, and got involved in a fight with four other men. His ear drum  was ruptured in the fight, and he was unabled to fly back to Germany with his friends.<br><br> He rented a room from a hostel in a poor area in Varna,  Bulgaria. He was seen behaving oddly on the hostel's  security cameras, only spending one night at the hostel. He had called his mother to cancel all his credit cards  and that four men were following him, threatening to kill him. His mother then booked him a flight back to Germany  for the following day.<br><br>
+ Lars Mittank was seen on airport security cameras entering  the airport with his luggage. Later he was seen sprinting out of the airport, without his luggage, jumping over a  fence. Eyewitnesses told seeing him running into the nearby forest, which was the last time he was seen. What do you  think really happened to Lars Mittank?<br><br>
+            </p>
+             <p>Sources: <a href = "https://en.wikipedia.org/wiki/Disappearance_of_Lars_Mittank">Wikipedia</a></p>
+        </div>
+        
+                <div class="article" id = "dyatlov-pass">
+            <h1>The Incident at Dyatlov Pass</h1>
+            <p>
+                On February 1, 1959, nine ski-hikers went to the Ural                     mountains, what is now Russia. The group set up a camp on                 the slope of Kholat 
+                Syakhl, that is now named Igor Dyatlov, the name of the                   groups leader. Something mysterious had happenad to them, 
+                because they never returned.<br><br>Searchers were sent to
+                find the missing group. After many days of searching, on 
+                February 26, searchers found the ski-hiker's abandoned 
+                camp sight, where their tent was <em>ripped open from the
+                inside.</em> Footprints were found, that led to the near
+                by woods, where the first two bodies were found, with
+                only underwear on. The other seven bodies were found later.               First they were thought to have died from hypothermia, but
+                when the bodies were inventoried by medical examiners, the
+                evidence made no sense. Some of the bodies had radioactive
+                clothes on and some had signs of physical trauma, one body
+                had third-degree burns, one was missing a tongue, and 
+                another was missing both eyes. One body had a fractured
+                skull and another had been vomiting blood.<br><br> There are many 
+                theories of this mystery. One of them is <a href="https://en.wikipedia.org/wiki/Infrasound"                       >infrasound</a>
+                , wich is a real phenomenon, that can cause fear in humans. It's still unknown what happened that night to the nine ski-hikers.
+            </p>
+            <p>Sources: <a href = "https://en.wikipedia.org/wiki/Dyatlov_Pass_incident#:~:text=The%20Dyatlov%20Pass%20incident%20%28Russian%3A%20%D0%93%D0%B8%D0%B1%D0%B5%D0%BB%D1%8C%20%D1%82%D1%83%D1%80%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%8B%20%D0%94%D1%8F%D1%82%D0%BB%D0%BE%D0%B2%D0%B0%29,an%20area%20now%20named%20in%20honour%20of%20">Wikipedia</a></p>
+        </div>
+        
+    </div>
+    
+    <div id = "history-articles">
+        <div class = "article" id = "mystery-heading" ><h1>HISTORY</h1></div>
+        <div class = "article" id = "yamato">
+            <h1>The Mighty Battleship Yamato</h1>
+            <p>Japan coudn't build large fleets of ships against
+            the United States, so they decided to build larger
+            ships, that could attack many ships at once. The new
+            larger ships were called the Yamato-class.<br><br>
+            The first battleship of the Yamato-class was the                  mighty Yamato. She was launched on August 8, 1940,
+            and was named after the Yamato province. She was 256 
+            meters long, but her sister the Musashi was larger.
+            <br><br>
+            The construction of the Yamato in Kure was kept in
+            secret and hidden from spies. If one of the workers 
+            told someone about the project, they could have faced 
+            a  death sentence.<br><br>
+            The Yamato weighed in total 72,800 tons, and her 
+            armor weighed in total 22,534 tons, almost 
+            one-third of the ships weight. She was outfitted
+            with nine 18.1-inch guns on three turrets. The largest
+            and most powerful ever mounted on a warship. The turrets weighed 2,774 tons, and the guns 
+            had a range of 25-miles (40-km). The Yamato had the 
+            largest amount of artillery mounted on one ship.
+            Her armor varied from 8-inches to 16-inches thick, 
+            and her gun turrets were protected with armor ranging
+            from 9.5-inches to 26 inches thick.
+            She had a hangar , which could store 3 to 4 aircraft,
+            that were launched by two catapults.<br><br>
+            Her four steam engines could produce a power of
+            150,000 SHP. Her top speed was 27 knots (50 km/h).
+            <br><br>
+            The Yamato was enver a part of a major battle, but the
+            battle of Leyte Gulf she saw her first big action. She
+            hit a Aemrican aircraft carrier from a distance of 
+            20-miles, with her 18.1-inch guns.<br><br>
+            The Yamato faced her fate on April 7, 1945, when she 
+            was met by 400 American aircraft. She withstood the 
+            bombs, that were dropped on her, but she was finally
+            sunk by 19 American aerial torpedoes, drowning 2,498
+            of her crew. The end of the Yamato was, when her her
+            forward internal magazines detonated. The result was 
+            a large explosion. In the incident 3,063 of Yamato's
+            3,332 crew members were killed. Even though the Yamato
+            sunk, she is still one of the greatest battleships of
+            all time.
+            </p>
+        </div>
+    </div>
+    
+    <div id = "quiz-page">
+        <div id = "maantieto-quiz">
+            <h2>MAANTIETO</h2>
+            <p>10 Kysymystä</p>
+            <button class = "pelaa-nappi" id = "MaNappi">PELAA</button>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    
+        $("#menu").hide();
+        $("#mystery-articles").hide();
+        $("#quiz-page").hide();
+        $("#history-articles").hide();
+        
+        $("#button").on("click", function(event) {
+            event.preventDefault();
+            $("#menu").slideDown(600);
+        });
+        $("#back").on("click", function(event) {
+           $("#menu").slideUp(600); 
+        });
+        $("#search-button").on("click", function(event) {
+            event.preventDefault();
+        });
+        $("#front").on("click", function(event) {
+            event.preventDefault();
+            $("#front-articles").slideDown();
+            $("#mystery-articles").hide();
+             $("#quiz-page").hide();
+             $("#history-articles").hide();
+        });
+        $("#mystery").on("click", function(event) {
+            event.preventDefault();
+            $("#front-articles").hide();
+            $("#mystery-articles").slideDown();
+             $("#quiz-page").hide();
+             $("#history-articles").hide();
+        });
+        $("#horror").on("click", function(event) {
+            event.preventDefault();
+            $("#front-articles").hide();
+            $("#mystery-articles").hide();
+             $("#quiz-page").hide();
+             $("#history-articles").hide();
+        });
+        $("#history").on("click", function(event) {
+            event.preventDefault();
+            $("#front-articles").hide();
+            $("#mystery-articles").hide();
+             $("#quiz-page").hide();
+             $("#history-articles").slideDown();
+        });
+         $("#quiz").on("click", function(event) {
+            event.preventDefault();
+            $("#front-articles").hide();
+            $("#mystery-articles").hide();
+            $("#quiz-page").slideDown();
+            $("#history-articles").hide();
+        });
+    </script>
+    </body>
+</html>
